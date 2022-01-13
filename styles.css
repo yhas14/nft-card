@@ -1,0 +1,240 @@
+/* 
+Primary colors
+- Soft blue: hsl(215, 51%, 70%)
+- Cyan: hsl(178, 100%, 50%)
+
+Neutral
+- Very dark blue (main BG): hsl(217, 54%, 11%)
+- Very dark blue (card BG): hsl(216, 50%, 16%)
+- Very dark blue (line): hsl(215, 32%, 27%)
+- White: hsl(0, 0%, 100%)
+
+Font-size
+- Font size (paragraph): 18px
+
+Font-family
+- Outfit
+- Weights: 300, 400, 600
+
+*/
+
+
+
+/* 
+    My attempt
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 10px;
+    padding: 0;
+}
+
+body {
+    // background-color: var(--main-bg) ; //
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    background-color: var(--card-bg);
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+}
+
+.card img {
+    width: 80%;
+    justify-items: center;
+    position: relative;
+    left:50px;
+    top: 30px;
+}
+
+.title {
+    color: var(--white);
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.paragraph {
+    color: var(--line);
+}
+
+ul li {
+    list-style: none;
+}
+
+.avatar {
+    display: flex;
+    align-items: center;
+}
+
+.avatar img {
+    width: 75px;
+    border: 2px solid white;
+    border-radius: 100%;
+    margin-right: 15px;
+}
+.sp {
+    color: var(--line);
+}
+
+*/
+
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,400;1,100;1,700&family=Open+Sans&family=Outfit:wght@300;400;600&family=Poppins:ital,wght@0,400;1,200;1,600&family=Public+Sans:wght@300;400&family=Shadows+Into+Light&family=VT323&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+:root {
+    /* Primary Colors*/
+    --Soft-blue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+
+    /* Neutral */
+    --main-bg:hsl(217, 54%, 11%);
+    --card-bg:hsl(216, 50%, 16%);
+    --line: hsl(215, 32%, 27%);
+    --white:hsl(0, 0%, 100%);
+}
+
+body {
+    font-family: "Outfit", "sans-serif";
+    font-size: 18px;
+    background-color: var(--main-bg);
+    color: hsl(0, 0%, 100%, 60%);
+    padding: 1.25rem;
+   
+}
+
+.attribution {
+    font-size: 16px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+.container .avatar {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding-top: 2rem;
+}
+
+.container .avatar img {
+    width: 3.5rem;
+    border: 2px solid var(--white);
+    border-radius: 50%;
+    margin-right: 1rem;
+}
+
+.container .avatar p span {
+    color: var(--white);
+    font-weight: 400;
+}
+
+.container .avatar p span:hover {
+    color: var(--Cyan);
+    cursor: pointer;
+}
+
+.container {
+    padding: 1.25rem;
+    background-color: var(--card-bg);
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.container h2 {
+    color: var(--white);
+    margin: 1rem 0.5rem 0.5rem 0;
+}
+
+.container h2:hover {
+    color: var(--Cyan);
+    cursor: pointer;
+}
+
+.container .main-image{
+    position: relative;
+    cursor: pointer;
+}
+
+.container .main-image div {
+    position: absolute;
+    top: 0;
+    background-color: hsl(178, 100%, 50%, 60%);;
+    width: 100%;
+    height: calc(100% - 4px);
+    z-index: 999;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 5px;
+}
+
+.container .main-image div:hover {
+    opacity: 1;
+    cursor: pointer;
+   
+}
+.container .main-image div img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.container ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--line);
+}
+
+.container ul li {
+    display: flex;
+    align-items: center;
+}
+
+.container ul li:first-child {
+    color: var(--Cyan);
+}
+
+.container ul li img {
+    margin-right: 0.5rem;
+}
+
+img {
+    max-width: 100%;
+}
+
+p {
+    font-weight: 300;
+}
+
+ul {
+    list-style: none;
+}
+
+@media(min-width: 500px){
+    .container {
+        width: 450px;
+        margin:0 auto 1rem;
+
+    }
+    /* body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        flex-direction: column;
+    } */
+}
